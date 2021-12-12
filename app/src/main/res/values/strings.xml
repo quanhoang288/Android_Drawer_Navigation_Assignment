@@ -1,21 +1,11 @@
 <resources>
     <string name="app_name">NavigationDrawerApp</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
-    <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Settings</string>
 
-    <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
     <string name="menu_calculator">Calculator</string>
     <string name="menu_number_converter">Number Converter</string>
-    <string name="menu_slideshow">Slideshow</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="menu_unit_converter">Unit Converter</string>
 
-    <!--    calculator strings-->
+    <!--calculator strings-->
     <string name="togglePosAndNeg">+/-</string>
     <string name="zeroButton">0</string>
     <string name="dotButton">.</string>
@@ -38,5 +28,16 @@
     <string name="addButton">+</string>
     <string name="equalButton">=</string>
     <string name="defaultOperandValue">0</string>
+
+    <!--number converter strings-->
+    <string name="from_label">From</string>
+    <string name="to_label">To</string>
+    <string name="result">Result</string>
+    <string-array name="units">
+        <item>Binary (2)</item>
+        <item>Octal (8)</item>
+        <item>Decimal (10)</item>
+        <item>Hexadecimal (16)</item>
+    </string-array>
 
 </resources>

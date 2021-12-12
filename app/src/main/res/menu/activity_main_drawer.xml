@@ -8,10 +8,7 @@
             android:id="@+id/nav_calculator"
             android:title="@string/menu_calculator" />
         <item
-            android:id="@+id/nav_num_converter"
+            android:id="@+id/nav_num_convert"
             android:title="@string/menu_number_converter" />
-        <item
-            android:id="@+id/nav_slideshow"
-            android:title="@string/menu_slideshow" />
     </group>
 </menu>

@@ -1,7 +1,6 @@
-package vn.hust.edu.navigationdrawerapp.ui.calculator;
+package vn.hust.edu.navigationdrawerapp;
 
 import androidx.appcompat.widget.AppCompatButton;
-import androidx.lifecycle.ViewModelProvider;
 
 import android.os.Bundle;
 
@@ -16,8 +15,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-
-import vn.hust.edu.navigationdrawerapp.R;
 
 public class CalculatorFragment extends Fragment {
 
@@ -35,10 +32,6 @@ public class CalculatorFragment extends Fragment {
     private static final String MULTIPLY_OPERATION = "multiply";
     private static final String DIVIDE_OPERATION = "divide";
 
-    private static final String CLEAR_ALL_OPERATION = "clearAll";
-    private static final String CLEAR_OPERAND_OPERATION = "clearOperand";
-    private static final String CLEAR_CHAR_OPERATION = "clearChar";
-
     public static CalculatorFragment newInstance() {
         return new CalculatorFragment();
     }
@@ -47,6 +40,92 @@ public class CalculatorFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         rootView = inflater.inflate(R.layout.fragment_calculator, container, false);
+
+        // init operand value
+        TextView operandValText = rootView.findViewById(R.id.operandValue);
+        operandValText.setText("0");
+
+        int[] numberButtonIds = {
+            R.id.zeroButton,
+            R.id.oneButton,
+            R.id.twoButton,
+            R.id.threeButton,
+            R.id.fourButton,
+            R.id.fiveButton,
+            R.id.sixButton,
+            R.id.sevenButton,
+            R.id.eightButton,
+            R.id.nineButton
+        };
+
+        int[] clearButtonIds = {
+            R.id.clearAllButton,
+            R.id.clearOperandButton,
+            R.id.backspaceButton,
+        };
+
+        int[] operatorIds = {
+            R.id.modularButton,
+            R.id.multiplyButton,
+            R.id.divideButton,
+            R.id.subtractButton,
+            R.id.addButton
+        };
+
+        for (int numId : numberButtonIds) {
+            AppCompatButton btn = rootView.findViewById(numId);
+            btn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    processNumber(view);
+                }
+            });
+        }
+
+        for (int operatorId: operatorIds) {
+            AppCompatButton btn = rootView.findViewById(operatorId);
+            btn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    processOperator(view);
+                }
+            });
+        }
+
+        for (int clearId: clearButtonIds) {
+            View clearView = rootView.findViewById(clearId);
+            clearView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    performClearOperation(view);
+                }
+            });
+        }
+
+        AppCompatButton togglePosAndNegButton = rootView.findViewById(R.id.togglePosAndNegButton);
+        AppCompatButton dotButton = rootView.findViewById(R.id.dotButton);
+        AppCompatButton equalButton = rootView.findViewById(R.id.equalButton);
+
+        equalButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                handleEqualButtonClick(view);
+            }
+        });
+        togglePosAndNegButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                togglePosAndNeg();
+            }
+        });
+        dotButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                processDot(view);
+            }
+        });
+
+
         return rootView;
     }
 
@@ -141,7 +220,7 @@ public class CalculatorFragment extends Fragment {
     }
 
 
-    public void togglePosAndNeg(View view) {
+    public void togglePosAndNeg() {
         if (this.hasSecondOperand) {
             this.secondOperand *= -1;
         } else if (this.operator != null) {

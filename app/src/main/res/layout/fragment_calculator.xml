@@ -6,7 +6,7 @@ android:layout_width="match_parent"
 android:layout_height="match_parent"
 android:layout_marginEnd="1dp"
 android:layout_marginBottom="1dp"
-tools:context=".ui.calculator.CalculatorFragment">
+tools:context=".CalculatorFragment">
 
 <TextView
     android:id="@+id/operationText"
@@ -45,8 +45,7 @@ tools:context=".ui.calculator.CalculatorFragment">
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="1dp"
         android:background="@color/light_grey"
-        android:contentDescription="TODO"
-        android:onClick="performClearOperation"
+        android:contentDescription=""
         android:textSize="14sp"
         tools:srcCompat="@android:drawable/ic_input_delete" />
 
@@ -64,7 +63,6 @@ tools:context=".ui.calculator.CalculatorFragment">
         android:background="@color/light_grey"
         android:text="@string/percentButton"
         android:textColor="@color/black"
-        android:onClick="processOperator"
         android:textSize="24sp" />
 
     <androidx.appcompat.widget.AppCompatButton
@@ -80,7 +78,6 @@ tools:context=".ui.calculator.CalculatorFragment">
         android:layout_marginBottom="1dp"
         android:background="@color/light_grey"
         android:text="@string/clearOperandButton"
-        android:onClick="performClearOperation"
         android:textColor="@color/black"
         android:textSize="24sp" />
 
@@ -97,7 +94,6 @@ tools:context=".ui.calculator.CalculatorFragment">
         android:layout_marginBottom="1dp"
         android:background="@color/light_grey"
         android:text="@string/clearButton"
-        android:onClick="performClearOperation"
         android:textColor="@color/black"
         android:textSize="24sp" />
 
@@ -114,7 +110,6 @@ tools:context=".ui.calculator.CalculatorFragment">
         android:layout_marginBottom="1dp"
         android:background="@color/light_grey"
         android:text="@string/divideButton"
-        android:onClick="processOperator"
         android:textColor="@color/black"
         android:textSize="24sp" />
 
@@ -131,7 +126,6 @@ tools:context=".ui.calculator.CalculatorFragment">
         android:layout_marginBottom="1dp"
         android:background="@color/white"
         android:text="@string/sevenButton"
-        android:onClick="processNumber"
         android:textColor="@color/black"
         android:textSize="24sp" />
 
@@ -148,7 +142,6 @@ tools:context=".ui.calculator.CalculatorFragment">
         android:layout_marginBottom="1dp"
         android:background="@color/white"
         android:text="@string/eightButton"
-        android:onClick="processNumber"
         android:textColor="@color/black"
         android:textSize="24sp" />
 
@@ -165,7 +158,6 @@ tools:context=".ui.calculator.CalculatorFragment">
         android:layout_marginBottom="1dp"
         android:background="@color/white"
         android:text="@string/nineButton"
-        android:onClick="processNumber"
         android:textColor="@color/black"
         android:textSize="24sp" />
 
@@ -182,7 +174,6 @@ tools:context=".ui.calculator.CalculatorFragment">
         android:layout_marginBottom="1dp"
         android:background="@color/light_grey"
         android:text="@string/multiplyButton"
-        android:onClick="processOperator"
         android:textColor="@color/black"
         android:textSize="24sp" />
 
@@ -199,7 +190,6 @@ tools:context=".ui.calculator.CalculatorFragment">
         android:layout_marginBottom="1dp"
         android:background="@color/white"
         android:text="@string/fourButton"
-        android:onClick="processNumber"
         android:textColor="@color/black"
         android:textSize="24sp" />
 
@@ -216,7 +206,6 @@ tools:context=".ui.calculator.CalculatorFragment">
         android:layout_marginBottom="1dp"
         android:background="@color/white"
         android:text="@string/fiveButton"
-        android:onClick="processNumber"
         android:textColor="@color/black"
         android:textSize="24sp" />
 
@@ -233,7 +222,6 @@ tools:context=".ui.calculator.CalculatorFragment">
         android:layout_marginBottom="1dp"
         android:background="@color/white"
         android:text="@string/sixButton"
-        android:onClick="processNumber"
         android:textColor="@color/black"
         android:textSize="24sp" />
 
@@ -250,7 +238,6 @@ tools:context=".ui.calculator.CalculatorFragment">
         android:layout_marginBottom="1dp"
         android:background="@color/light_grey"
         android:text="@string/subtractButton"
-        android:onClick="processOperator"
         android:textColor="@color/black"
         android:textSize="32sp" />
 
@@ -267,7 +254,6 @@ tools:context=".ui.calculator.CalculatorFragment">
         android:layout_marginBottom="1dp"
         android:background="@color/white"
         android:text="@string/oneButton"
-        android:onClick="processNumber"
         android:textColor="@color/black"
         android:textSize="24sp" />
 
@@ -284,7 +270,6 @@ tools:context=".ui.calculator.CalculatorFragment">
         android:layout_marginBottom="1dp"
         android:background="@color/white"
         android:text="@string/twoButton"
-        android:onClick="processNumber"
         android:textColor="@color/black"
         android:textSize="24sp" />
 
@@ -301,7 +286,6 @@ tools:context=".ui.calculator.CalculatorFragment">
         android:layout_marginBottom="1dp"
         android:background="@color/white"
         android:text="@string/threeButton"
-        android:onClick="processNumber"
         android:textColor="@color/black"
         android:textSize="24sp" />
 
@@ -318,7 +302,6 @@ tools:context=".ui.calculator.CalculatorFragment">
         android:layout_marginBottom="1dp"
         android:background="@color/light_grey"
         android:text="@string/addButton"
-        android:onClick="processOperator"
         android:textColor="@color/black"
         android:textSize="24sp" />
 
@@ -335,7 +318,6 @@ tools:context=".ui.calculator.CalculatorFragment">
         android:layout_marginBottom="1dp"
         android:background="@color/white"
         android:text="@string/togglePosAndNeg"
-        android:onClick="togglePosAndNeg"
         android:textColor="@color/black"
         android:textSize="24sp" />
 
@@ -352,7 +334,6 @@ tools:context=".ui.calculator.CalculatorFragment">
         android:layout_marginBottom="1dp"
         android:background="@color/white"
         android:text="@string/zeroButton"
-        android:onClick="processNumber"
         android:textColor="@color/black"
         android:textSize="24sp" />
 
@@ -369,7 +350,6 @@ tools:context=".ui.calculator.CalculatorFragment">
         android:layout_marginBottom="1dp"
         android:background="@color/white"
         android:text="@string/dotButton"
-        android:onClick="processDot"
         android:textColor="@color/black"
         android:textSize="24sp" />
 
@@ -386,7 +366,6 @@ tools:context=".ui.calculator.CalculatorFragment">
         android:layout_marginBottom="1dp"
         android:background="@android:color/holo_blue_light"
         android:text="@string/equalButton"
-        android:onClick="handleEqualButtonClick"
         android:textColor="@color/black"
         android:textSize="24sp" />
 </GridLayout>

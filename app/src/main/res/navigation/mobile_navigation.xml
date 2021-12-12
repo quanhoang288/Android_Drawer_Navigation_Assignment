@@ -5,21 +5,17 @@
     android:id="@+id/mobile_navigation"
     app:startDestination="@+id/nav_calculator">
 
+
     <fragment
         android:id="@+id/nav_calculator"
-        android:name="vn.hust.edu.navigationdrawerapp.ui.home.HomeFragment"
-        android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        android:name="vn.hust.edu.navigationdrawerapp.CalculatorFragment"
+        android:label="@string/menu_calculator"
+        tools:layout="@layout/fragment_calculator" />
 
     <fragment
-        android:id="@+id/nav_num_converter"
-        android:name="vn.hust.edu.navigationdrawerapp.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:id="@+id/nav_num_convert"
+        android:name="vn.hust.edu.navigationdrawerapp.NumberConverterFragment"
+        android:label="@string/menu_unit_converter"
+        tools:layout="@layout/fragment_number_converter" />
 
-    <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="vn.hust.edu.navigationdrawerapp.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
 </navigation>
